@@ -65,17 +65,18 @@ public class dtbSF extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
 
         db.execSQL(CREATE_TABLE_CATEGORY);
+
+        db.execSQL("INSERT INTO " + TABLE_CAT + "(" + CAT_NAME + ") VALUES ('Tops') ");
+        db.execSQL("INSERT INTO " + TABLE_CAT + "(" + CAT_NAME + ") VALUES ('Bottoms') ");
+        db.execSQL("INSERT INTO " + TABLE_CAT + "(" + CAT_NAME + ") VALUES ('Shoes') ");
+        db.execSQL("INSERT INTO " + TABLE_CAT + "(" + CAT_NAME + ") VALUES ('Dresses') ");
+        db.execSQL("INSERT INTO " + TABLE_CAT + "(" + CAT_NAME + ") VALUES ('Outerwear') ");
+        db.execSQL("INSERT INTO " + TABLE_CAT + "(" + CAT_NAME + ") VALUES ('Accessories') ");
+
         db.execSQL(CREATE_TABLE_KIND);
         db.execSQL(CREATE_TABLE_ITEMS);
 
-        // insert
 
-        db.execSQL("INSERT INTO " + TABLE_CAT + "(" + CAT_NAME + ") VALUES (Tops) ");
-        db.execSQL("INSERT INTO " + TABLE_CAT + "(" + CAT_NAME + ") VALUES (Bottoms) ");
-        db.execSQL("INSERT INTO " + TABLE_CAT + "(" + CAT_NAME + ") VALUES (Shoes) ");
-        db.execSQL("INSERT INTO " + TABLE_CAT + "(" + CAT_NAME + ") VALUES (Dresses) ");
-        db.execSQL("INSERT INTO " + TABLE_CAT + "(" + CAT_NAME + ") VALUES (Outerwear) ");
-        db.execSQL("INSERT INTO " + TABLE_CAT + "(" + CAT_NAME + ") VALUES (Accessories) ");
 
 
 
@@ -84,6 +85,7 @@ public class dtbSF extends SQLiteOpenHelper {
     //insert data
 
     private void insertData_CAT(int CAT_ID, String CAT_NAME, SQLiteDatabase dtb){
+        SQLiteDatabase db = this.getWritableDatabase();
         ContentValues values = new ContentValues();
 
         values.put("CAT_NAME", CAT_NAME);
