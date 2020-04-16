@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+    android:id="@+id/nav_closet"
+    android:icon="@drawable/closetpink"
+    android:title="Closet"/>
+    <item
+        android:id="@+id/nav_outfits"
+        android:icon="@drawable/outfitpink"
+        android:title="Outfits"/>
+
+    <item
+        android:id="@+id/nav_more"
+        android:icon="@drawable/morepink"
+        android:title="More"/>
+
+
+
+
+</menu>

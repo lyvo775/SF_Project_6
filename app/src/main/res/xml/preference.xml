@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <PreferenceCategory
+
+        app:key="sync"
+        app:title="Data &amp; Sync ">
+        <Preference
+            app:key="backup"
+            app:title="Back up"/>
+        <Preference
+            app:key="restore"
+            app:title="Restore"/>
+    </PreferenceCategory>
+<PreferenceCategory
+    app:key="support_category"
+    app:title="@string/support">
+    <Preference
+        app:key="feedback"
+        app:summary="@string/sp_feedback"
+        app:title="Feedback"/>
+</PreferenceCategory>
+    <PreferenceCategory
+        app:key="about_category"
+        app:title="@string/about">
+        <Preference
+            app:key="version"
+            app:summary="@string/about_contx_version"
+            app:title="Version"/>
+        <Preference
+            app:key="by"
+            android:summary="@string/about_contx_by"
+            app:title="Group"/>
+
+    </PreferenceCategory>
+</PreferenceScreen>
